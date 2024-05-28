@@ -5,10 +5,14 @@
     scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
 }
+html{
+    width: 100%;
+}
 
 body {
     color: #ededed;
     background: #051129;
+    width: 100%;
 }
 
 .header {
@@ -56,7 +60,7 @@ body {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
+    /* height: 100vh; */
     background: #051129;
     background-size: cover;
     background-position: center;
@@ -132,10 +136,18 @@ body {
 }
 
 .about {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(22, 1fr);
     align-items: center;
-    gap: 15rem;
+    gap: 15rem; */
+        /* display: grid; */
+        grid-template-columns: repeat(22, 1fr);
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 5rem;
+    
 }
 
 .about-img {
@@ -144,8 +156,11 @@ body {
     height: auto;
     width: 100%;
     border-radius: 8px;
+    
 }
-
+/* #about{
+    border: 1px solid greenyellow;
+} */
 .about-text h2 {
     font-size: 60px;
 }
@@ -573,7 +588,10 @@ body {
     font-weight: 600;
     transition: all .4s ease;
 }
-
+img{
+    height: 259px;
+    width: 400px
+}
 .contact-list li a:hover {
     transform: scale(1.01) translateY(-5px);
     color: #0ef;
@@ -831,16 +849,51 @@ form textarea {
 }
 
 @media (max-width: 768px) {
+   #project h2{
+    font-size: 2rem;
+    padding: 10px;
+   }
     .home {
         background-size: cover;
+        flex-direction: column-reverse;
     }
-
+/* .portfolio-content{
+    border: 1px solid rgb(52, 92, 236);
+} */
+.portfolio-content .row img{
+    /* border: 1px solid red; */
+    width: 50%;
+    padding: 10px;
+    height: 10rem;
+    margin: 1rem;
+}
     .home .home-content h1 {
         font-size: 36px;
     }
 
     .home .home-content h3 {
         font-size: 24px;
+    }
+    img{
+    width: 177px;
+    height: 263px;
+    border-radius: 27%;
+    }
+    #about{
+        padding: 0 20%;
+        /* border: 1px solid red; */
+    }
+    #right-about{
+        width: 40 vw;
+    }
+    #skills{
+        /* border: 1px solid blue; */
+        margin-top: 2vh;
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+        width: auto;
     }
 }
 
